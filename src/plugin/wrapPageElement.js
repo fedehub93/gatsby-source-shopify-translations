@@ -13,7 +13,7 @@ const wrapPageElement = (
   const { language, languages, originalPath, defaultLanguage, path } =
     pageContext
 
-  const localeNodes = data?.[localeJsonNodeName]?.edges
+  const localeNodes = data?.[localeJsonNodeName]?.edges || []
 
   if (
     locales.length > 1 &&
