@@ -4,11 +4,11 @@ import { LocaleContext } from "../context"
 import { localizedPath } from "../helpers"
 
 export const useLocalization = () => {
-  const locale = useContext(LocaleContext)
+  const {language, defaultLang} = useContext(LocaleContext)
   const config = withDefaults()
 
   return {
-    locale,
+    language,
     defaultLang,
     prefixDefault: config.prefixDefault,
     localizedPath,

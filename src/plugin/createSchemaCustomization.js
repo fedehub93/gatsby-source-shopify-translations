@@ -2,20 +2,11 @@ exports.createSchemaCustomization = function ({ actions }) {
   const { createTypes } = actions
 
   createTypes(`
-    type I18N implements Node {
-      defaultLang: String
-      prefixDefault: Boolean
-      configPath: String
-      config: [Locale]
-    }
-    
-    type Locale {
-      code: String
-      hrefLang: String
-      dateFormat: String
-      langDir: String
-      localName: String
-      name: String
+    type Locale implements Node {
+      language: String
+      ns: String
+      data: String
+      fileAbsolutePath: String
     }
 
     type Option {

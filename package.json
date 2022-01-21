@@ -1,10 +1,10 @@
 {
   "name": "gatsby-source-shopify-translations",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Translations resources from shopify and Internationalization using the i18next i18n ecosystem.",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --out-dir . --ignore \"**/__tests__\"",
+    "build": "babel src --out-dir dist --ignore \"**/__tests__\"",
     "test": "jest"
   },
   "author": "Federico Verrengia",

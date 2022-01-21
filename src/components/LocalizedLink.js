@@ -5,9 +5,9 @@ import PropTypes from "prop-types"
 import { localizedPath } from "../helpers"
 import { useLocalization } from "../hooks/useLocalization"
 
-export const LocalizedLink = forwardRef(({ to, language, ...props }, ref) => {
-  const { defaultLang, prefixDefault, locale } = useLocalization()
-  const linkLocale = language || locale
+export const LocalizedLink = forwardRef(({ to, lang, ...props }, ref) => {
+  const { defaultLang, prefixDefault, language } = useLocalization()
+  const linkLocale = lang || language
   return (
     <Link
       {...props}
@@ -24,5 +24,5 @@ export const LocalizedLink = forwardRef(({ to, language, ...props }, ref) => {
 
 LocalizedLink.propTypes = {
   to: PropTypes.string.isRequired,
-  language: PropTypes.string,
+  lang: PropTypes.string,
 }
