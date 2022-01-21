@@ -20,29 +20,41 @@ exports.onCreatePage = ({ page, actions }, pluginOptions) => {
     if (locales.includes(pageLocale[1])) {
       deletePage(page)
 
-      languages.forEach(locale => {
-        const newPage = {
-          ...page,
-          context: {
-            ...page.context,
-            language: locale.code,
-            languages: languages,
-            defaultLanguage: defaultLang,
-            hrefLang: locale.hrefLang,
-            dateFormat: locale.dateFormat,
-          },
-        }
-        createPage(newPage)
-      })
+      const locale = languages.find(lang => lang.code === page.context.locale)
+      
+      const newPage = {
+        ...page,
+        context: {
+          ...page.context,
+          language: locale.code,
+          languages: languages,
+          defaultLanguage: defaultLang,
+          hrefLang: locale.hrefLang,
+          dateFormat: locale.dateFormat,
+        },
+      }
+      createPage(newPage)
       return
     }
   }
 
   const originalPath = page.path
 
-  // If 404 page I don't delete
+  // If 404 page I don't delete or home
   if (page.path.indexOf("404") === -1 && page.path !== "/") {
     deletePage(page)
+  } else {
+    deletePage(page)
+    const newPage = {
+      ...page,
+      context: {
+        ...page.context,
+        languages: languages,
+        defaultLanguage: defaultLang,
+        originalPath,
+      },
+    }
+    createPage(newPage)
   }
 
   // Exclude product page  exit
