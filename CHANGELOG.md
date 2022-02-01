@@ -1,3 +1,9 @@
+#### 0.2.4 (2022-02-01)
+
+##### Documentation Changes
+
+*  improve instructions in README (2ecf06dd)
+
 #### 0.2.3 (2022-02-01)
 
 ##### Documentation Changes
