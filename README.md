@@ -24,8 +24,16 @@ or
 
 ### Configure the plugin
 
+I recommend setting the shopify variables in the .env file since they are data you don't want to show.
+
+Then at the top of your gatsby-config.json file you can add this line to be able to read those variables.
+
+`require("dotenv").config()`
+
 ```javascript
 // gatsby-config.js
+require("dotenv").config()
+
 plugins: [
   {
     resolve: `gatsby-source-shopify-translations`,
@@ -42,7 +50,19 @@ plugins: [
 ]
 ```
 
-### Translated resources in GraphQL Data Layer
+## Plugin Options
+
+| Option          | Type     | Description                                                                                                                                 |
+| --------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| shopName        | string   | url of your shopify store. Example: `mysite.myshopify.com`                                                                                  |
+| shopifyPassword | string   | password of your shopify store                                                                                                              |
+| accessToken     | string   | access token of your shopify store                                                                                                          |
+| locales         | string[] | languages of translations                                                                                                                   |
+| defaultLang     | string   | default language that you decide to prefix in path or not                                                                                   |
+| prefixDefault   | boolean  | if the value is `true` then the pages in the default language will also be preceded by the language in the path. Example: [locale] / [page] |
+| configPath      | string   | path of the config file                                                                                                                     |
+
+## Translated resources in GraphQL Data Layer
 
 You will find new nodes called `AllShopifyTranslatedProduct` and `AllShopifyTranslatedCollection`.
 
@@ -119,7 +139,7 @@ const result = await graphql(`
   })
 ```
 
-### Setup translations
+## Setup translations
 
 You'll also need to create a `config.json` file in `locales` folder on base root and `[locale]` subfolder with `translations.json`.
 
@@ -161,7 +181,7 @@ If you want to translate the url of pages in `pages` folder than you have to set
 }
 ```
 
-### Change your components
+## Change your components
 
 Use react i18next [`useTranslation`](https://react.i18next.com/latest/usetranslation-hook) react hook and [`Trans`](https://react.i18next.com/latest/trans-component) component to translate your pages.
 
@@ -197,6 +217,21 @@ const IndexPage = () => {
     </Layout>
   )
 }
+
+export default IndexPage
+
+export const query = graphql`
+  query ($language: String) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          data
+          language
+        }
+      }
+    }
+  }
+`
 ```
 
 ## Credits
