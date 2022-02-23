@@ -14,12 +14,7 @@
   "author": "Federico Verrengia",
   "license": "MIT",
   "dependencies": {
-    "@apollo/client": "^3.5.8",
-    "i18next": "^21.6.10",
-    "i18next-browser-languagedetector": "^6.1.3",
-    "i18next-http-backend": "^1.3.2",
-    "react": "17.0.1",
-    "react-i18next": "^11.15.3"
+    "@apollo/client": "^3.5.8"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.8",
@@ -30,7 +25,10 @@
   },
   "peerDependencies": {
     "gatsby": "^4.5.0",
-    "gatsby-source-shopify": "^4.0.0"
+    "gatsby-source-shopify": "^4.0.0",
+    "i18next": "^20.x || ^21.x",
+    "react": "^17.x",
+    "react-i18next": "^11.12.0"
   },
   "keywords": [
     "gatsby",
