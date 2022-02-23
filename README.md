@@ -16,11 +16,11 @@ Source translations resources from shopify and easily translate your Gatsby webs
 
 ### Install package
 
-`yarn add gatsby-source-shopify-translations`
+`yarn add gatsby-source-shopify-translations i18next react-i18next`
 
 or
 
-`npm install gatsby-source-shopify-translations`
+`npm install gatsby-source-shopify-translations i18next react-i18next`
 
 ### Configure the plugin
 
