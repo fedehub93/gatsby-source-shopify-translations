@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.7](https://github.com/fedehub93/gatsby-source-shopify-translations/compare/v0.2.6...v0.2.7) (2022-02-23)
+
+
+### Bug Fixes
+
+* removed useless dependencies and added peerDependencies ([42a3a43](https://github.com/fedehub93/gatsby-source-shopify-translations/commit/42a3a433f862dc24fd73614ffeffc412ed3637a0))
+
+
+### Docs
+
+* README.md, added package to install: i18next - react-i18next ([8bf8c67](https://github.com/fedehub93/gatsby-source-shopify-translations/commit/8bf8c678d370540b21c3f2d447dd05e828dfeedf))
+
 ### [0.2.6](https://github.com/fedehub93/gatsby-source-shopify-translations/compare/v0.2.5...v0.2.6) (2022-02-02)
 
 
