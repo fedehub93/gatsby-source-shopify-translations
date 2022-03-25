@@ -45,6 +45,7 @@ plugins: [
       prefixDefault: true,
       configPath: require.resolve("./locales/config.json"),
       locales: ["it", "en"],
+      waitingGatsbySourceShopify: 5000,
     },
   },
 ]
@@ -61,6 +62,7 @@ plugins: [
 | defaultLang     | string   | default language that you decide to prefix in path or not                                                                                   |
 | prefixDefault   | boolean  | if the value is `true` then the pages in the default language will also be preceded by the language in the path. Example: [locale] / [page] |
 | configPath      | string   | path of the config file                                                                                                                     |
+| waitingGatsbySourceShopify      | number   | every ms the plugin wait gatsby-source-shopify and retry to get translations                                                                                                                      |
 
 ## Translated resources in GraphQL Data Layer
 
