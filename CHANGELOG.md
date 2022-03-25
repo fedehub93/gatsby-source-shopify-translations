@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://github.com/fedehub93/gatsby-source-shopify-translations/compare/v0.3.1...v0.3.2) (2022-03-25)
+
+
+### Bug Fixes
+
+* wrong typo on Missing configurations message [[#4](https://github.com/fedehub93/gatsby-source-shopify-translations/issues/4)] ([26a0327](https://github.com/fedehub93/gatsby-source-shopify-translations/commit/26a032786f1e160eee75c79b8deb2988322722f8))
+
 ### [0.3.1](https://github.com/fedehub93/gatsby-source-shopify-translations/compare/v0.3.0...v0.3.1) (2022-03-25)
 
 
