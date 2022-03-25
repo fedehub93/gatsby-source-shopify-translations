@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/fedehub93/gatsby-source-shopify-translations/compare/v0.2.7...v0.3.0) (2022-03-25)
+
+
+### Bug Fixes
+
+* wait for gatsby-source-shopify end to get translations fix [[#3](https://github.com/fedehub93/gatsby-source-shopify-translations/issues/3)](https://github.com/fedehub93/gatsby-source-shopify-translations/issues/3) ([4b64808](https://github.com/fedehub93/gatsby-source-shopify-translations/commit/4b648083525b940f6b6c68493b114c844cb3bb3f))
+
+
+### Docs
+
+* README.md, waitingGatsbySourceShopify new plugin option info's ([2338289](https://github.com/fedehub93/gatsby-source-shopify-translations/commit/2338289b39784f6c65cbd2263f027bf76ced1dcb))
+
 ### [0.2.7](https://github.com/fedehub93/gatsby-source-shopify-translations/compare/v0.2.6...v0.2.7) (2022-02-23)
 
 
