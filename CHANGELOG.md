@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/fedehub93/gatsby-source-shopify-translations/compare/v0.3.0...v0.3.1) (2022-03-25)
+
+
+### Bug Fixes
+
+* max input array size limit on shopify call set to 250 fix [[#3](https://github.com/fedehub93/gatsby-source-shopify-translations/issues/3)] ([602a4eb](https://github.com/fedehub93/gatsby-source-shopify-translations/commit/602a4eb1317adcb92a0acc5942dc0e0e9407bf5d))
+
 ## [0.3.0](https://github.com/fedehub93/gatsby-source-shopify-translations/compare/v0.2.7...v0.3.0) (2022-03-25)
 
 
