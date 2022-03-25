@@ -98,7 +98,7 @@ exports.sourceNodes = async (gatsbyApi, pluginOptions) => {
     !pluginOptions.accessToken
   ) {
     console.log(
-      "\nMissing configurations - shopName, shopifyAccessToken and yotpoAppKey are required"
+      "\nMissing configurations - shopName, shopifyPassword and shopifyAccessToken are required"
     )
     process.exit(1)
   }
