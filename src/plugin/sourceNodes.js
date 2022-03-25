@@ -1,6 +1,8 @@
 const slugify = require("@sindresorhus/slugify")
 const { resources } = require("../resources")
 
+const MAX_INPUT_RANGE = 250
+
 function wait(ms, value) {
   return new Promise(resolve => setTimeout(resolve, ms, value))
 }
@@ -47,19 +49,24 @@ async function sourceAllNodes(gatsbyApi, pluginOptions) {
         waitingGatsbySourceShopify
       )
       const ids = resourceNodes.map(node => node.shopifyId)
-      const { data } = await op(ids)
-      const newTranslations = data.nodes
-        .filter(node => !!node)
-        .map(node => {
-          return {
-            ...node,
-            handle: slugify(node.title),
-            storefrontId: node.id,
-            locale: lang,
-          }
-        })
 
-      translations = [...translations, ...newTranslations]
+      const callNumbers = Math.ceil(ids.length / MAX_INPUT_RANGE)
+
+      for (let i = 0; i < callNumbers; i++) {
+        const idsTranch = ids.splice(0, MAX_INPUT_RANGE)
+        const { data } = await op(idsTranch)
+        const newTranslations = data.nodes
+          .filter(node => !!node)
+          .map(node => {
+            return {
+              ...node,
+              handle: slugify(node.title),
+              storefrontId: node.id,
+              locale: lang,
+            }
+          })
+        translations = [...translations, ...newTranslations]
+      }
     }
 
     reporter.info(
