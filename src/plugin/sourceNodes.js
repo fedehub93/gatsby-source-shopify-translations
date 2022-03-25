@@ -1,8 +1,29 @@
 const slugify = require("@sindresorhus/slugify")
 const { resources } = require("../resources")
 
+function wait(ms, value) {
+  return new Promise(resolve => setTimeout(resolve, ms, value))
+}
+
+async function waitShopifyNodes(
+  getNodesByType,
+  resource,
+  waitingGatsbySourceShopify
+) {
+  const resourceNodes = getNodesByType(resource.nodeType)
+  if (resourceNodes.length === 0) {
+    await wait(waitingGatsbySourceShopify)
+    return waitShopifyNodes(
+      getNodesByType,
+      resource,
+      waitingGatsbySourceShopify
+    )
+  }
+  return resourceNodes
+}
+
 async function sourceAllNodes(gatsbyApi, pluginOptions) {
-  const { locales } = pluginOptions
+  const { locales, waitingGatsbySourceShopify = 5000 } = pluginOptions
 
   const {
     actions,
@@ -20,7 +41,11 @@ async function sourceAllNodes(gatsbyApi, pluginOptions) {
     for (const lang of locales) {
       const op = resource.getOperation(pluginOptions, lang)
 
-      const resourceNodes = getNodesByType(resource.nodeType)
+      const resourceNodes = await waitShopifyNodes(
+        getNodesByType,
+        resource,
+        waitingGatsbySourceShopify
+      )
       const ids = resourceNodes.map(node => node.shopifyId)
       const { data } = await op(ids)
       const newTranslations = data.nodes
