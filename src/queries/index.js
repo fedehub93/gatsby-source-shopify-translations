@@ -43,8 +43,8 @@ exports.translatedProductsQuery = ids => {
                 node {
                   id
                   key
-                  description
                   value
+                  description
                 }
               }
             }
