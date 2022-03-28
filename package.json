@@ -1,6 +1,6 @@
 {
   "name": "gatsby-source-shopify-translations",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Translations resources from shopify and Internationalization using the i18next i18n ecosystem.",
   "main": "index.js",
   "scripts": {
