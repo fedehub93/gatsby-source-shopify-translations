@@ -38,6 +38,16 @@ exports.translatedProductsQuery = ids => {
                 }
               }
             }
+            metafields(first: 30) {
+              edges {
+                node {
+                  id
+                  key
+                  value
+                  description
+                }
+              }
+            }
           }
         }
       }

@@ -33,6 +33,21 @@ exports.createSchemaCustomization = function ({ actions }) {
       edges: [VariantNode]
     }
 
+    type Metafield {
+      id: String
+      key: String
+      value: String
+      description: String
+    }
+
+    type MetafieldNode {
+      node: Metafield
+    }
+
+    type MetafieldEdges {
+      edges: [MetafieldNode]
+    }
+
     type Collection {
       id: String
       title: String
@@ -56,6 +71,7 @@ exports.createSchemaCustomization = function ({ actions }) {
       collections: CollectionEdges
       options: [Option]
       variants: VariantEdges
+      metafields: MetafieldEdges
     }
 
     type ShopifyTranslatedCollection implements Node {
