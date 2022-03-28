@@ -56,9 +56,9 @@ async function sourceAllNodes(gatsbyApi, pluginOptions) {
         const idsTranch = ids.splice(0, MAX_INPUT_RANGE)
         const { data } = await op(idsTranch)
         const newTranslations = data.nodes
-          .filter(node => !!node)
-          .map(node => {
-            return {
+        .filter(node => !!node)
+        .map(node => {
+          return {
               ...node,
               handle: slugify(node.title),
               storefrontId: node.id,
