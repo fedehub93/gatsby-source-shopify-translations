@@ -2,6 +2,7 @@ const { localizedPath, getLanguages } = require(`../helpers`)
 const { withDefaults } = require(`../utils/default-options`)
 
 exports.onCreatePage = ({ page, actions }, pluginOptions) => {
+  if (pluginOptions.sourceOnlyMode) return
   const { createPage, deletePage, createRedirect } = actions
   const { configPath, defaultLang, locales, prefixDefault } =
     withDefaults(pluginOptions)
