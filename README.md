@@ -63,6 +63,7 @@ plugins: [
 | prefixDefault   | boolean  | if the value is `true` then the pages in the default language will also be preceded by the language in the path. Example: [locale] / [page] |
 | configPath      | string   | path of the config file                                                                                                                     |
 | waitingGatsbySourceShopify      | number   | every ms the plugin wait gatsby-source-shopify and retry to get translations                                                                                                                      |
+| sourceOnlyMode | boolean   | setting this to `true` disables injecting `i18next` into your page, you might want to activate this if you use your own `i18next` instance and use this plugin only to source Shopify translations. Default is `false`.|
 
 ## Translated resources in GraphQL Data Layer
 

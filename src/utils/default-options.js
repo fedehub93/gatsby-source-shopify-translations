@@ -13,6 +13,7 @@ function withDefaults(themeOptions) {
       ? themeOptions.prefixDefault
       : false,
     locales: themeOptions.locales || null,
+    sourceOnlyMode: themeOptions.sourceOnlyMode ? themeOptions.sourceOnlyMode : false
   }
 }
 
