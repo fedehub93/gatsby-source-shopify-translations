@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file. See [standa
 ### [0.4.1](https://github.com/fedehub93/gatsby-source-shopify-translations/compare/v0.4.0...v0.4.1) (2022-04-04)
 
 
+### Features
+
+* added sourceOnlyMode plugin config flag ([19a1e35](https://github.com/fedehub93/gatsby-source-shopify-translations/commit/19a1e35d3ad4497156a70e3149d3d7d76def795f))
+* skip onCreatePage in sourceOnlyMode ([68a90e9](https://github.com/fedehub93/gatsby-source-shopify-translations/commit/68a90e93d592290e382255f09f6a063a1300e14c))
+
+
 ### Bug Fixes
 
 * remove console.log needed to debug ([a179492](https://github.com/fedehub93/gatsby-source-shopify-translations/commit/a1794921757c90dc84d40698ca4df91d0ad9b6fb))
