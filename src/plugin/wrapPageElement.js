@@ -6,9 +6,9 @@ import { LocaleContext } from "../context"
 
 const wrapPageElement = (
   { element, props },
-  { locales, localeJsonNodeName = "locales" }
+  { locales, sourceOnlyMode, localeJsonNodeName = "locales" }
 ) => {
-  if (!props) return
+  if (!props || sourceOnlyMode) return
   const { data, pageContext } = props
   const { language, languages, originalPath, defaultLanguage, path } =
     pageContext
