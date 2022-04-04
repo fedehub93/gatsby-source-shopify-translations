@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.1](https://github.com/fedehub93/gatsby-source-shopify-translations/compare/v0.4.0...v0.4.1) (2022-04-04)
+
+
+### Bug Fixes
+
+* remove console.log needed to debug ([a179492](https://github.com/fedehub93/gatsby-source-shopify-translations/commit/a1794921757c90dc84d40698ca4df91d0ad9b6fb))
+
+
+### Docs
+
+* new features about metafields translations ([f712816](https://github.com/fedehub93/gatsby-source-shopify-translations/commit/f7128160d01512786a294efa9aa7e5d4ba6f2664))
+
 ## [0.4.0](https://github.com/fedehub93/gatsby-source-shopify-translations/compare/v0.3.2...v0.4.0) (2022-03-28)
 
 
