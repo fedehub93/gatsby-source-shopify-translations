@@ -61,6 +61,13 @@ exports.createSchemaCustomization = function ({ actions }) {
       edges: [CollectionNode]
     }
 
+    type Image {
+      id: String
+      src: String
+      width: String
+      height: String
+    }
+
     type ShopifyTranslatedProduct implements Node {
       id: ID
       title: String
@@ -80,6 +87,7 @@ exports.createSchemaCustomization = function ({ actions }) {
       description: String
       descriptionHtml: String
       handle: String
+      image: Image
     }
   `)
 }

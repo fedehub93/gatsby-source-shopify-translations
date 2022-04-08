@@ -70,6 +70,12 @@ exports.translatedCollectionsQuery = ids => {
             description
             descriptionHtml
             handle
+            image {
+              id
+              src
+              width
+              height
+            }
           }
         }
       }
