@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/fedehub93/gatsby-source-shopify-translations/compare/v0.4.1...v0.5.0) (2023-08-07)
+
+
+### Chores
+
+* **release:** 0.4.1 ([ea06ff6](https://github.com/fedehub93/gatsby-source-shopify-translations/commit/ea06ff6f987667d1d1de9626a906169bd11f09bb))
+
 ### [0.4.1](https://github.com/fedehub93/gatsby-source-shopify-translations/compare/v0.4.0...v0.4.1) (2022-04-04)
 
 
