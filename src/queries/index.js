@@ -1,9 +1,12 @@
 const { gql } = require("@apollo/client")
 
-exports.translatedProductsQuery = ids => {
+exports.translatedProductsQuery = (ids, identifiers) => {
   return {
     query: gql`
-      query translatedThings($ids: [ID!]!) {
+      query translatedThings(
+        $ids: [ID!]!
+        $identifiers: [HasMetafieldsIdentifier!]!
+      ) {
         nodes(ids: $ids) {
           ... on Product {
             __typename
@@ -38,15 +41,10 @@ exports.translatedProductsQuery = ids => {
                 }
               }
             }
-            metafields(first: 30) {
-              edges {
-                node {
-                  id
-                  key
-                  value
-                  description
-                }
-              }
+            metafields(identifiers: $identifiers) {
+              key
+              value
+              namespace
             }
           }
         }
@@ -54,11 +52,12 @@ exports.translatedProductsQuery = ids => {
     `,
     variables: {
       ids,
+      identifiers,
     },
   }
 }
 
-exports.translatedCollectionsQuery = ids => {
+exports.translatedCollectionsQuery = (ids) => {
   return {
     query: gql`
       query translatedThings($ids: [ID!]!) {

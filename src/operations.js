@@ -12,15 +12,15 @@ exports.createOperations = options => {
   }
 
   return {
-    createTranslatedProductsOperation: async ids => {
+    createTranslatedProductsOperation: async (ids, identifiers) => {
       return await createOperation(
-        translatedProductsQuery(ids),
+        translatedProductsQuery(ids, identifiers),
         "TRANSLATED_PRODUCTS"
       )
     },
-    createTranslatedCollectionsOperation: async ids => {
+    createTranslatedCollectionsOperation: async (ids, identifiers) => {
       return await createOperation(
-        translatedCollectionsQuery(ids),
+        translatedCollectionsQuery(ids, identifiers),
         "TRANSLATED_COLLECTIONS"
       )
     },
